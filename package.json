@@ -1,0 +1,21 @@
+{
+  "name": "academika",
+  "version": "1.0.0",
+  "description": "Academic Services Platform",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Build complete - static HTML site'",
+    "lint": "echo 'No linting configured for static HTML'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "academic",
+    "services",
+    "education"
+  ],
+  "author": "",
+  "license": "ISC"
+}
