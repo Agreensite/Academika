@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Academic Services</div>
+            <div class="nav-links">
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ru">Русский</button>
+                <button class="lang-btn" data-lang="uz">Ўзбек</button>
+                <a href="#admin-login" class="admin-link" id="adminToggle">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="hero">
+            <h1 data-i18n="hero_title">Welcome to Academic Services</h1>
+            <p data-i18n="hero_subtitle">Your Complete Solution for Academic Excellence</p>
+        </header>
+
+        <section class="services">
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3 data-i18n="service_translation">Translation Services</h3>
+                <p data-i18n="service_translation_desc">Professional translation in multiple languages</p>
+                <button class="order-btn" onclick="orderService('translation')">Order Now</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✏️</div>
+                <h3 data-i18n="service_editing">Editing & Proofreading</h3>
+                <p data-i18n="service_editing_desc">Expert editing for your academic papers</p>
+                <button class="order-btn" onclick="orderService('editing')">Order Now</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3 data-i18n="service_admin">Administration Services</h3>
+                <p data-i18n="service_admin_desc">Complete administrative support</p>
+                <button class="order-btn" onclick="orderService('admin')">Order Now</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3 data-i18n="service_presentation">Presentation Design</h3>
+                <p data-i18n="service_presentation_desc">Professional presentation creation</p>
+                <button class="order-btn" onclick="orderService('presentation')">Order Now</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3 data-i18n="service_autocad">AutoCAD Design</h3>
+                <p data-i18n="service_autocad_desc">Technical and architectural designs</p>
+                <button class="order-btn" onclick="orderService('autocad')">Order Now</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3 data-i18n="service_businesscard">Business Card Design</h3>
+                <p data-i18n="service_businesscard_desc">Creative business card designs</p>
+                <button class="order-btn" onclick="orderService('businesscard')">Order Now</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-i18n="order_form_title">Order Form</h2>
+            <form id="orderForm">
+                <input type="hidden" id="serviceType">
+                <div class="form-group">
+                    <label data-i18n="form_name">Name:</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form_email">Email:</label>
+                    <input type="email" id="customerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form_phone">Phone:</label>
+                    <input type="tel" id="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form_description">Description:</label>
+                    <textarea id="customerDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form_deadline">Deadline:</label>
+                    <input type="date" id="customerDeadline" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-i18n="admin_login">Admin Login</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label data-i18n="form_username">Username:</label>
+                    <input type="text" id="adminUsername" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form_password">Password:</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
