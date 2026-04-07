@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academika provides academic services including translation, editing, and presentation design.">
+    <title>Academic Services Platform</title>
+    <link rel="stylesheet" href="styles.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" role="heading">Academic Services</div>
 </head>
 <body>
     <nav class="navbar">
@@ -120,6 +129,7 @@
         </div>
     </div>
 
+    <script src="speed-insights.bundle.js"></script>
     <script src="i18n.js"></script>
     <script src="app.js"></script>
 </body>
